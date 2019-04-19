@@ -1,0 +1,5 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0 - First public release
+Date: 18.04.2019
+  Major Features:
+    - Provides four new types of cannon shells that avoid friendly fire.
