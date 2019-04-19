@@ -49,4 +49,6 @@ Links
 =====
 Factorio mod portal page: https://mods.factorio.com/mods/smcpeak/SmartCannonShells
 
+Github repo: https://github.com/smcpeak/factorio-smart-cannon-shells
+
 RoboTank: https://mods.factorio.com/mods/smcpeak/RoboTank
