@@ -38,7 +38,8 @@ balance is welcome in this discussion section of the mod page.
 
 Smart shells pass through rocks and trees as if they were allies.  I suspect
 that is a bug in Factorio, but it's hard to tell because the "force_condition"
-attribute at the heart of this mod is not well documented.
+attribute at the heart of this mod is not well documented.  See
+[bug report on forum](https://forums.factorio.com/viewtopic.php?f=7&t=69742).
 
 Acknowledgments
 ===============
