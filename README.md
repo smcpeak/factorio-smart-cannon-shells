@@ -1,6 +1,6 @@
 Introduction
 ============
-SmartCannonShells is a mod for [Factorio](https://wiki.factorio.com/).  It adds
+Smart Cannon Shells is a mod for [Factorio](https://wiki.factorio.com/).  It adds
 four new kinds of cannon shells: ordinary, explosive, uranium, and explosive
 uranium.  Unlike their vanilla counterparts, they pass through allies.
 
