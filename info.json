@@ -1,10 +1,10 @@
 {
     "name": "SmartCannonShells",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "title": "Smart Cannon Shells",
     "author": "Scott McPeak",
     "homepage": "https://github.com/smcpeak/factorio-smart-cannon-shells",
-    "factorio_version": "0.17",
-    "dependencies": ["base >= 0.17"],
+    "factorio_version": "0.18",
+    "dependencies": ["base >= 0.18"],
     "description": "Provides cannon shells that pass through friendly forces."
 }
