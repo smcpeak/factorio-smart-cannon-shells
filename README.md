@@ -26,9 +26,8 @@ Usage
 Unlock the new technologies and craft the new items.  Every recipe is
 basically the same: one vanilla shell plus one red circuit.
 
-Smart shells pass through allies.  However, the explosive variants cause
-splash damage on impact that damages everything, including allies, so
-they are still pretty dangerous.
+Smart shells pass through allies.  The explosive variants splash damage
+also does not harm allies.
 
 Limitations
 ===========
@@ -45,6 +44,13 @@ Acknowledgments
 ===============
 I learned how to create ammunition without friendly fire by looking at
 [Cannon Turret](https://mods.factorio.com/mod/vtk-cannon-turret) by VortiK.
+
+Pi-C
+[asked](https://mods.factorio.com/mod/SmartCannonShells/discussion/5e56381600922b000d06bd1a)
+about removing explosive friendly fire damage and suggested a way to do
+it, although it didn't quite work.  Klonan then explained how to turn
+off friendly fire for explosive splash damage in [this forum
+post](https://forums.factorio.com/viewtopic.php?p=484967#p484967).
 
 Links
 =====
