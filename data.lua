@@ -99,6 +99,33 @@ local function add_smart_shell(base_prefix)
   -- allies.
   projectile.force_condition = "not-friend";
 
+  -- Remove friendly fire on splash damage.
+  --
+  -- The idea is to dig around in the projectile effects to find an area
+  -- effect, which should be the explosive splash damage, and set it to
+  -- only affect non-friend forces.  The force_condition on the
+  -- projectile itself does not accomplish that.
+  --
+  -- This code tries to be defensive at each step in case other mods
+  -- have altered the projectile effects.
+  local fa = projectile.final_action;
+  if (fa ~= nil) then
+    local ad = fa.action_delivery;
+    if (ad ~= nil) then
+      local te = ad.target_effects;
+      if (te ~= nil) then
+        for i, effect in ipairs(te) do
+          local ea = effect.action;
+          if (ea ~= nil and ea.type == "area") then
+            log(projectile_name .. ": found action to modify: " ..
+                serpent.line(ea));
+            ea.force = "not-friend";
+          end;
+        end;
+      end;
+    end;
+  end;
+
   data:extend{recipe, item, projectile};
 end;
 
