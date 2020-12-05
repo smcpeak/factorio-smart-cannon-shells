@@ -17,11 +17,11 @@ local smart_cannon_shell_technology = {
   },
   icon = "__SmartCannonShells__/graphics/technology/smart-cannon-shell-technology.png",
   icon_size = 64,
-  order = "e-c-c-3",                   -- After Tanks, and RoboTanks too if that is installed.
+  order = "e-c-c-3",                   -- After Tank, and RoboTanks too if that is installed.
   prerequisites = {
-    "tanks"                            -- Ordinary tank, which implies red circuit.
+    "tank"                             -- Ordinary tank, which implies red circuit.
   },
-  unit = data.raw["technology"].tanks.unit,   -- Same cost as Tanks.
+  unit = data.raw["technology"].tank.unit,   -- Same cost as Tank.
 };
 
 local smart_uranium_cannon_shell_technology = {
@@ -43,7 +43,42 @@ local smart_uranium_cannon_shell_technology = {
   prerequisites = {
     "uranium-ammo"
   },
-  unit = data.raw["technology"]["uranium-ammo"].unit,
+
+  -- In versions before 0.3.0, the research cost was the same as uranium
+  -- shells, but that is a pretty steep cost, especially as the main
+  -- balance mechanism is the per-item cost, not the research.  Also I
+  -- think some people might install the mod just to see what it does
+  -- and be dissuaded by the long research wait before even seeing it in
+  -- action.  So, in 0.3.0 I made this nearly the same as above, just
+  -- the fairly minor cost of Tank, although with the added requirement
+  -- of yellow science, mainly just to ensure this technology appears
+  -- after the non-uranium smart shells in the tech tree.
+  unit = {
+    count = 250,
+    ingredients = {
+      {
+        "automation-science-pack",
+        1
+      },
+      {
+        "logistic-science-pack",
+        1
+      },
+      {
+        "chemical-science-pack",
+        1
+      },
+      {
+        "military-science-pack",
+        1
+      },
+      {
+        "utility-science-pack",
+        1
+      }
+    },
+    time = 30
+  }
 };
 
 

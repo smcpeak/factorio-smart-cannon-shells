@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 05.12.2020
+  Compatibility:
+    - Update for compatibility with Factorio 1.1.
+  Bugfixes:
+    - Correct item descriptions to not say that splash damage does friendly fire.
+  Balance:
+    - Reduce research cost of smart uranium shells.
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 18.03.2020
   Bugfixes:
