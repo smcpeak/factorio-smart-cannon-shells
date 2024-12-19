@@ -141,8 +141,8 @@ local function add_smart_shell(base_prefix)
   local projectile = table.deepcopy(data.raw.projectile[base_projectile_name]);
   projectile.name = projectile_name;
 
-  -- https://wiki.factorio.com/Prototype/Projectile
-  -- https://wiki.factorio.com/Types/ForceCondition
+  -- https://lua-api.factorio.com/latest/prototypes/ProjectilePrototype.html
+  -- https://lua-api.factorio.com/latest/types/ForceCondition.html
   --
   -- There is a bug here: with "not-friend", I cannot shoot rocks and
   -- trees.  With "not-same", rocks and trees can be shot, but so can
