@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2024-12-19
+  Compatibility:
+    - Update for compatibility with Factorio 2.0.  Loading old saves from 1.x is untested.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
 Date: 05.12.2020
   Compatibility:
