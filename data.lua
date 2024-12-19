@@ -4,15 +4,15 @@
 -- Technology to make smart cannon shells.
 local smart_cannon_shell_technology = {
   type = "technology",
-  name = "smart-cannon-shell-technology",
+  name = "smart-cannon-shell",
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "smart-cannon-shell-recipe",
+      recipe = "smart-cannon-shell",
     },
     {
       type = "unlock-recipe",
-      recipe = "smart-explosive-cannon-shell-recipe",
+      recipe = "smart-explosive-cannon-shell",
     },
   },
   icon = "__SmartCannonShells__/graphics/technology/smart-cannon-shell-technology.png",
@@ -26,15 +26,15 @@ local smart_cannon_shell_technology = {
 
 local smart_uranium_cannon_shell_technology = {
   type = "technology",
-  name = "smart-uranium-cannon-shell-technology",
+  name = "smart-uranium-cannon-shell",
   effects = {
     {
       type = "unlock-recipe",
-      recipe = "smart-uranium-cannon-shell-recipe",
+      recipe = "smart-uranium-cannon-shell",
     },
     {
       type = "unlock-recipe",
-      recipe = "smart-explosive-uranium-cannon-shell-recipe",
+      recipe = "smart-explosive-uranium-cannon-shell",
     },
   },
   icon = "__SmartCannonShells__/graphics/technology/smart-uranium-cannon-shell-technology.png",
@@ -88,8 +88,8 @@ local function add_smart_shell(base_prefix)
   local base_shell_name      = base_prefix .. "-shell";
   local base_projectile_name = base_prefix .. "-projectile";
 
-  local recipe_name     = "smart-" .. base_shell_name .. "-recipe";
-  local item_name       = "smart-" .. base_shell_name .. "-item";
+  local recipe_name     = "smart-" .. base_shell_name;
+  local item_name       = "smart-" .. base_shell_name;
   local projectile_name = "smart-" .. base_shell_name .. "-projectile";
 
   -- The recipe is one base shell and one red circuit.
@@ -126,7 +126,7 @@ local function add_smart_shell(base_prefix)
     type = "ammo",
     name = item_name,
     description = item_name,
-    icon = "__SmartCannonShells__/graphics/icons/" .. item_name .. ".png",
+    icon = "__SmartCannonShells__/graphics/icons/" .. item_name .. "-item.png",
     icon_size = 32,
     ammo_type = table.deepcopy(base_item.ammo_type),
     ammo_category = table.deepcopy(base_item.ammo_category),
