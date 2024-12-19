@@ -29,8 +29,30 @@ Usage
 Unlock the new technologies and craft the new items.  Every recipe is
 basically the same: one vanilla shell plus one red circuit.
 
-Smart shells pass through allies.  The explosive variants' splash damage
-also does not harm allies.
+By default, smart shells pass through units of the same force, and the
+explosive variants' splash damage does not harm them.
+
+Configuration
+=============
+
+The precise targeting condition can be set in the startup settings:
+
+* Not same (default): Hits any unit that is not the same force,
+  including trees and rocks.
+
+* Not friend: Hits any unit that is not part of a friendly force.
+  Does *not* hit trees and rocks.
+
+* Enemy: Hits any unit that is part of an enemy force.
+  Does *not* hit trees and rocks.
+
+* There are a few other settings (everything else the internal API
+  supports) meant only for testing.
+
+The default hits trees and rocks because clearing them at the same time
+as shooting bugs is helpful for visibility and navigation, but it has
+the drawback of not working well in the case of an allied but not the
+same force, hence the setting is configurable.
 
 Limitations
 ===========
@@ -39,9 +61,9 @@ I'm not sure how well balanced these additions are.  I have deliberately
 started at what I think is the high end in terms of cost.  Feedback on
 balance is welcome in this discussion section of the mod page.
 
-Smart shells pass through rocks and trees as if they were allies.  I suspect
-that is a bug in Factorio, but it's hard to tell because the "force_condition"
-attribute at the heart of this mod is not well documented.  See
+It would be good if there were a targeting setting that would hit trees
+and rocks while not hitting any allied force, but the API does not
+provide that capability.  See
 [bug report on forum](https://forums.factorio.com/viewtopic.php?f=7&t=69742).
 
 Acknowledgments

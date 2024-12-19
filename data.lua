@@ -1,6 +1,19 @@
 -- SmartCannonShells data.lua
 -- Extend the global data table to describe the mod elements.
 
+
+-- Configuration: What forces to target.
+--
+-- https://lua-api.factorio.com/latest/prototypes/ProjectilePrototype.html
+-- https://lua-api.factorio.com/latest/types/ForceCondition.html
+--
+-- There is arguably a bug here: with "not-friend", I cannot shoot rocks
+-- and trees.  With "not-same", rocks and trees can be shot, but so can
+-- allies.
+--
+local force_condition = settings.startup["smart-cannon-shells-target-force-condition"].value;
+
+
 -- Technology to make smart cannon shells.
 local smart_cannon_shell_technology = {
   type = "technology",
@@ -140,14 +153,7 @@ local function add_smart_shell(base_prefix)
   -- The smart projectile is the same except we eliminate friendly fire.
   local projectile = table.deepcopy(data.raw.projectile[base_projectile_name]);
   projectile.name = projectile_name;
-
-  -- https://lua-api.factorio.com/latest/prototypes/ProjectilePrototype.html
-  -- https://lua-api.factorio.com/latest/types/ForceCondition.html
-  --
-  -- There is a bug here: with "not-friend", I cannot shoot rocks and
-  -- trees.  With "not-same", rocks and trees can be shot, but so can
-  -- allies.
-  projectile.force_condition = "not-friend";
+  projectile.force_condition = force_condition;
 
   -- Remove friendly fire on splash damage.
   --
@@ -169,7 +175,7 @@ local function add_smart_shell(base_prefix)
           if (ea ~= nil and ea.type == "area") then
             log(projectile_name .. ": found action to modify: " ..
                 serpent.line(ea));
-            ea.force = "not-friend";
+            ea.force = force_condition;
           end;
         end;
       end;
