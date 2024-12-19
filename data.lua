@@ -99,10 +99,24 @@ local function add_smart_shell(base_prefix)
     enabled = false,
     energy_required = 2,               -- 2 seconds to build.
     ingredients = {
-      {base_shell_name, 1},
-      {"advanced-circuit", 1},
+      {
+        amount = 1,
+        name = base_shell_name,
+        type = "item",
+      },
+      {
+        amount = 1,
+        name = "advanced-circuit",
+        type = "item",
+      },
     },
-    result = item_name,
+    results = {
+      {
+        amount = 1,
+        name = item_name,
+        type = "item",
+      },
+    },
   };
 
   -- Smart shell is basically the same as an ordinary shell
@@ -115,6 +129,7 @@ local function add_smart_shell(base_prefix)
     icon = "__SmartCannonShells__/graphics/icons/" .. item_name .. ".png",
     icon_size = 32,
     ammo_type = table.deepcopy(base_item.ammo_type),
+    ammo_category = table.deepcopy(base_item.ammo_category),
     magazine_size = base_item.magazine_size,
     subgroup = "ammo",
     order = base_item.order .. "-s[smart]",
