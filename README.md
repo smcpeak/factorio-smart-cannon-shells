@@ -47,7 +47,10 @@ The precise targeting condition can be set in the startup settings:
   Does *not* hit trees and rocks.
 
 * There are a few other settings (everything else the internal API
-  supports) meant only for testing.
+  supports) meant only for testing.  (Specifically, it exposes the
+  [ForceCondition](https://lua-api.factorio.com/latest/types/ForceCondition.html)
+  of a
+  [ProjectilePrototype](https://lua-api.factorio.com/latest/prototypes/ProjectilePrototype.html).)
 
 The default hits trees and rocks because clearing them at the same time
 as shooting bugs is helpful for visibility and navigation, but it has

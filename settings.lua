@@ -10,6 +10,7 @@ data:extend({
     setting_type = "startup",
     default_value = "not-same",
     allowed_values = {
+      -- https://lua-api.factorio.com/latest/types/ForceCondition.html
       "not-same",
       "not-friend",
       "enemy",
