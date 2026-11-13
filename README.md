@@ -8,7 +8,7 @@ uranium.  Unlike their vanilla counterparts, they pass through allies.
 I created this mod as an optional complement to [RoboTank](https://mods.factorio.com/mods/smcpeak/RoboTank),
 for which I am working on the ability to fire cannon shells.  The vanilla
 shells cause a lot of friendly fire in that scenario due to automated and
-somewhat indiscriminant firing.
+somewhat indiscriminate firing.
 
 I chose to not simply bundle the new shells with RoboTank in case
 people don't want to use cannon shells with RoboTank, and thus do not
